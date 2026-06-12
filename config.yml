@@ -1,0 +1,87 @@
+# ╔══════════════════════════════════════════════════════╗
+# ║              RankedSMP Configuration v3.0            ║
+# ║         Inspired by SEA4's Ranked SMP Series         ║
+# ╚══════════════════════════════════════════════════════╝
+
+# ─── Gameplay Settings ────────────────────────────────
+gameplay:
+  # If false, killing a higher-ranked player steals their rank
+  keep-ranks: false
+  # Maximum number of ranked players (do not change mid-game)
+  max-ranked-players: 20
+  # Announce rank swaps in chat
+  announce-rank-swaps: true
+  # Show rank above player heads (nametag)
+  show-nametags: true
+
+# ─── Health Scaling ───────────────────────────────────
+# Rank #1 = max-hearts, Rank #20 = min-hearts
+# Values are in half-hearts (20 = 10 hearts)
+health:
+  rank-1-hearts: 40      # 20 full hearts
+  rank-20-hearts: 21     # ~10.5 hearts
+
+# ─── XP Multiplier ────────────────────────────────────
+xp:
+  rank-1-multiplier: 3.0
+  rank-20-multiplier: 1.1
+
+# ─── Potion Duration Multiplier ───────────────────────
+potions:
+  rank-1-multiplier: 2.0
+  rank-20-multiplier: 1.05
+  # Scale negative effects in reverse (weaker negatives for higher ranks)
+  scale-negative-effects: true
+
+# ─── Extra Inventory ──────────────────────────────────
+# Only ranks 1-10 get extra inventory
+extra-inventory:
+  rank-1-slots: 54     # Full double chest
+  rank-2-slots: 54
+  rank-3-slots: 45
+  rank-4-slots: 45
+  rank-5-slots: 36
+  rank-6-slots: 36
+  rank-7-slots: 27
+  rank-8-slots: 27
+  rank-9-slots: 18
+  rank-10-slots: 9
+
+# ─── Hierarchy Hammer ─────────────────────────────────
+hammer:
+  # Hits needed before verdict activates
+  hits-to-charge: 4
+  # Damage multiplier on verdict hit
+  verdict-damage-multiplier: 2.0
+  # AoE radius of verdict shockwave (blocks)
+  verdict-aoe-radius: 4.0
+  # Knockback force of verdict
+  verdict-knockback: 2.5
+  # Dash cooldown in seconds
+  dash-cooldown: 3
+  # Combo reset window (ticks) - time between hits before combo resets
+  combo-window-ticks: 60
+
+# ─── Dragon Egg ───────────────────────────────────────
+dragon-egg:
+  # Buff the egg holder receives
+  holder-speed-amplifier: 1     # Speed II (0=I, 1=II)
+  holder-strength-amplifier: 0  # Strength I
+  # Glow effect so others can see the holder
+  holder-glows: true
+  # Broadcast when egg changes hands
+  announce-egg-pickup: true
+
+# ─── Messages ─────────────────────────────────────────
+messages:
+  prefix: "&8[&6RankedSMP&8] "
+  rank-stolen: "&c{killer} &7stole rank &6#{rank} &7from &c{victim}&7!"
+  rank-swap: "&7You are now rank &6#{rank}&7."
+  system-started: "&aRankedSMP has started! Ranks have been assigned."
+  system-stopped: "&cRankedSMP has been stopped. All ranks cleared."
+  no-permission: "&cYou don't have permission to do that."
+  not-ranked: "&cYou are not a ranked player."
+  top10-only: "&cOnly top 10 ranked players have extra inventory."
+
+# ─── Player Data (auto-managed) ───────────────────────
+players: {}

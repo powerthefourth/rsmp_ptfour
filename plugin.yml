@@ -1,0 +1,26 @@
+name: RankedSMP
+version: '3.0'
+main: me.rankedsmp.RankedSMP
+api-version: '1.21'
+authors: [Improved Build]
+description: Ranked SMP Plugin - Full Featured
+
+commands:
+  rankedsmp:
+    description: Main RankedSMP command
+    usage: /rankedsmp <help|start|stop|reload|manage|rank|give|list|reset>
+    aliases: [rsmp]
+    permission: rankedsmp.admin
+  extrainventory:
+    description: Open your extra inventory (Top 10 ranks only)
+    usage: /extrainventory
+    aliases: [einv]
+    permission: rankedsmp.use
+
+permissions:
+  rankedsmp.admin:
+    description: Full admin access to RankedSMP
+    default: op
+  rankedsmp.use:
+    description: Basic player usage (extra inventory)
+    default: true
